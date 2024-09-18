@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 311143459}
   - component: {fileID: 311143458}
   - component: {fileID: 311143461}
+  - component: {fileID: 311143462}
   m_Layer: 0
   m_Name: floor
   m_TagString: Untagged
@@ -369,6 +370,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &311143462
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311143456}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &326675368 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3298134312328724685, guid: f0de1e5c795b08d4483100870c8034e4, type: 3}
@@ -411,6 +433,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -484,6 +507,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9d79f852a282e42a13604c7a0ed8c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myTarget: {fileID: 1493846863}
 --- !u!1 &867424901
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,6 +740,7 @@ GameObject:
   - component: {fileID: 1420826940}
   - component: {fileID: 1420826939}
   - component: {fileID: 1420826942}
+  - component: {fileID: 1420826943}
   m_Layer: 0
   m_Name: ceiling
   m_TagString: Untagged
@@ -802,6 +839,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1420826943
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420826937}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1455119164
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,6 +872,7 @@ GameObject:
   - component: {fileID: 1455119167}
   - component: {fileID: 1455119166}
   - component: {fileID: 1455119169}
+  - component: {fileID: 1455119170}
   m_Layer: 0
   m_Name: left wall
   m_TagString: Untagged
@@ -912,6 +971,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1455119170
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455119164}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1493846861
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,6 +1005,7 @@ GameObject:
   - component: {fileID: 1493846864}
   - component: {fileID: 1493846865}
   - component: {fileID: 1493846866}
+  - component: {fileID: 1493846867}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -992,7 +1073,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493846861}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.73, y: -4.31, z: 0}
+  m_LocalPosition: {x: -3.73, y: -3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1012,10 +1093,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94fa0b89676eaca42a2f30d39546afaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accel: 1
-  horM: 1
-  vertM: 1
+  accel: 0.1
+  horM: 0.5
+  vertM: 0.5
   rb: {fileID: 1493846866}
+  cam: {fileID: 519420031}
 --- !u!58 &1493846865
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1053,6 +1135,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1493846867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493846861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2b0a91bac33034fa45043e0e0ae5c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firepoint: {fileID: 1692899508}
+  bulletPrefab: {fileID: 713535124176262728, guid: 4fa2964c2ffb98c499a19a97f4242d5a, type: 3}
+  bulletforce: 100
 --- !u!1 &1600971010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1104,6 +1201,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1692899507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1692899508}
+  m_Layer: 0
+  m_Name: gunpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1692899508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692899507}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.4, y: -0.44000006, z: 0}
+  m_LocalScale: {x: 5, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1190974875}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1858228376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,6 +1244,7 @@ GameObject:
   - component: {fileID: 1858228379}
   - component: {fileID: 1858228378}
   - component: {fileID: 1858228381}
+  - component: {fileID: 1858228382}
   m_Layer: 0
   m_Name: right wall
   m_TagString: Untagged
@@ -1214,6 +1343,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1858228382
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858228376}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1970302470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,6 +1472,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1493846863}
     m_Modifications:
+    - target: {fileID: 1106536186831234980, guid: 7b80a895767ddb14482246e83b18aa65, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873020260879171583, guid: 7b80a895767ddb14482246e83b18aa65, type: 3}
+      propertyPath: m_SortingOrder
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 4414106135985385648, guid: 7b80a895767ddb14482246e83b18aa65, type: 3}
       propertyPath: m_Name
       value: gun

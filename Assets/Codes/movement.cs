@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,8 +15,11 @@ public class movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
+        rb = GetComponent<Rigidbody2D>();
     }
+
+   
 
     // Update is called once per frame
     void Update()
@@ -27,9 +31,10 @@ public class movement : MonoBehaviour
         Vector3 currentDir = Dir();
         currentDir.x *= horM;
         currentDir.y *= vertM;
-        transform.Translate(Dir() * accel);
-        Vector2 lookDir = mousePos - rb.mousePosition;
-        float angle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg-90f;
+        transform.Translate(Dir() * accel, Space.World);
+        Vector2 lookDir = mousePos - rb.position;
+        float angle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg;
+        rb.rotation = angle;
 
     }
     public Vector3 Dir()
