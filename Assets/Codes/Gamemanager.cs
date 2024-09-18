@@ -15,6 +15,8 @@ public class Gamemanager : MonoBehaviour
     public GameObject Player;
     public TextMeshProUGUI gametimer;
     public TextMeshProUGUI myscore;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,10 +35,11 @@ public class Gamemanager : MonoBehaviour
             Instantiate(Enemy);
 
         }
+       
         gametimer.text = "Time:" + Mathf.Round(Timer).ToString();
     }
     void FixUpdate()
     {
-           
+        
     }
 }

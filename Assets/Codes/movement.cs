@@ -7,6 +7,10 @@ public class movement : MonoBehaviour
     public float accel = 1;
     public float horM = 1;
     public float vertM = 1;
+
+    public Rigidbody2D rb;
+    public Camera cam;
+    Vector2 mousePos;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +20,7 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
     private void FixedUpdate()
     {
@@ -24,6 +28,9 @@ public class movement : MonoBehaviour
         currentDir.x *= horM;
         currentDir.y *= vertM;
         transform.Translate(Dir() * accel);
+        Vector2 lookDir = mousePos - rb.mousePosition;
+        float angle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg-90f;
+
     }
     public Vector3 Dir()
     {
