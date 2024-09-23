@@ -6,7 +6,7 @@ using TMPro;
 public class Gamemanager : MonoBehaviour
 {
     public float Timer = 0f;
-    float playerScore = 0f;
+   
     public float spawntimer = 0f;
     public float spawninterval = 0f;
 
@@ -15,6 +15,7 @@ public class Gamemanager : MonoBehaviour
     public GameObject Player;
     public TextMeshProUGUI gametimer;
     public TextMeshProUGUI myscore;
+    float collectScore;
 
 
     // Start is called before the first frame update
@@ -35,11 +36,17 @@ public class Gamemanager : MonoBehaviour
             Instantiate(Enemy);
 
         }
-       
+        
         gametimer.text = "Time:" + Mathf.Round(Timer).ToString();
+        myscore.text = "score: " + collectScore.ToString();
     }
     void FixUpdate()
     {
         
+    }
+    public void AddScore()
+    {
+        collectScore++;
+
     }
 }

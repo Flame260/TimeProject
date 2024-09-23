@@ -8,15 +8,18 @@ public class movement : MonoBehaviour
     public float accel = 1;
     public float horM = 1;
     public float vertM = 1;
+    public float walkspeed = 2;
 
     public Rigidbody2D rb;
     public Camera cam;
     Vector2 mousePos;
+    public float runspeed = 2f; 
     // Start is called before the first frame update
     void Start()
     {
        
         rb = GetComponent<Rigidbody2D>();
+
     }
 
    
@@ -31,10 +34,22 @@ public class movement : MonoBehaviour
         Vector3 currentDir = Dir();
         currentDir.x *= horM;
         currentDir.y *= vertM;
-        transform.Translate(Dir() * accel, Space.World);
+        transform.Translate(currentDir * accel, Space.World);
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            horM = runspeed;
+            vertM = runspeed;
+
+        }
+        else
+        {
+            horM = walkspeed;
+            vertM = walkspeed;
+
+        }
 
     }
     public Vector3 Dir()
