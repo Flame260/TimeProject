@@ -1120,8 +1120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   accel: 1
-  horM: 0.5
-  vertM: 0.5
+  horM: 0.1
+  vertM: 0.1
   walkspeed: 0.1
   rb: {fileID: 1493846866}
   cam: {fileID: 519420031}
