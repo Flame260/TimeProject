@@ -26,4 +26,12 @@ public class enemyai : MonoBehaviour
         transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
         transform.rotation = Quaternion.Euler(Vector3.forward *angle);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.gameObject.tag == "Player")
+        {
+            speed =30;
+        }
+    }
 }

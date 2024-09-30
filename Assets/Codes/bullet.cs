@@ -23,7 +23,7 @@ public class bullet : MonoBehaviour
             Destroy(collision.gameObject);
             gamemanager.AddScore();
             hit= true;
-             Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
     
