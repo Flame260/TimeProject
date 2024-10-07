@@ -7,7 +7,7 @@ using UnityEngine;
 public class shooting : MonoBehaviour
 {
     public TextMeshProUGUI bulletcount;
-    public int bullets = 40;
+    public int bullets = 30;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,7 @@ public class shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1") && bullets > 0)
+        if (Input.GetButtonDown("Fire1") && bullets > 0)
         {
             Shoot();
         }
