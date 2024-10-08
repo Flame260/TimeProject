@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collectible
   - GameManager
+  - Death
   layers:
   - Default
   - TransparentFX

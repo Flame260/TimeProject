@@ -8,6 +8,8 @@ public class shooting : MonoBehaviour
 {
     public TextMeshProUGUI bulletcount;
     public int bullets = 30;
+    public float cooldown;
+    public float atkspeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +23,18 @@ public class shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && bullets > 0)
+        if(Input.GetButtonDown("Fire1") && cooldown <= 0)
         {
-            Shoot();
+            if (bullets > 0)
+            {
+                Shoot();
+            }
+            cooldown=atkspeed;
+
+        }
+        else
+        {
+            cooldown-=Time.deltaTime;
         }
         bulletcount.text = "Bullets:"+bullets.ToString();
     }

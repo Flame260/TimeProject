@@ -5,7 +5,9 @@ using UnityEngine;
 public class enemyai : MonoBehaviour
 {
     public GameObject player;
+    public GameObject Death;
     public float speed;
+    private bool touch; 
 
     private float distance;
 
@@ -13,6 +15,8 @@ public class enemyai : MonoBehaviour
     void Start()
     {
       player= GameObject.FindGameObjectWithTag("Player");
+      Death= GameObject.FindGameObjectWithTag("Death");
+      touch = false; 
     }
 
     // Update is called once per frame
@@ -29,9 +33,23 @@ public class enemyai : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (touch) return; 
         if(collision.collider.gameObject.tag == "Player")
         {
-            speed =30;
+            touch=true;
+            push();
+           
         }
+        else
+        {
+            touch=false;
+        }   
+    }
+    void push()
+    {
+        speed =30;
+        distance = Vector2.Distance(transform.position, Death.transform.position);
+        Vector2 direction = Death.transform.position - transform.position;
+
     }
 }

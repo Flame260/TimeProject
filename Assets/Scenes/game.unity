@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 508070593}
   m_Layer: 0
   m_Name: beam wall
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -614,8 +614,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508070588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -210.8, y: 1.4, z: 0}
-  m_LocalScale: {x: 20, y: 23.7223, z: 0}
+  m_LocalPosition: {x: -225.7749, y: -1.5555, z: 0}
+  m_LocalScale: {x: 48.373894, y: 8.3549385, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -660,7 +660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1493846861}
-  speed: 2
+  speed: 3
 --- !u!114 &508070593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1404,6 +1404,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletcount: {fileID: 1913523502}
   bullets: 40
+  cooldown: 0
+  atkspeed: 0.2
   firepoint: {fileID: 1692899508}
   bulletPrefab: {fileID: 713535124176262728, guid: 4fa2964c2ffb98c499a19a97f4242d5a, type: 3}
   bulletforce: 40
