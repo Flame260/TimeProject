@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2239708437709089844, guid: bab5d64ebc704574c988ae5c9a1abffa, type: 3}
       propertyPath: m_Name
-      value: Capsule
+      value: Capsule Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 2956177280161269036, guid: bab5d64ebc704574c988ae5c9a1abffa, type: 3}
       propertyPath: m_RootOrder
@@ -57,3 +57,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bab5d64ebc704574c988ae5c9a1abffa, type: 3}
+--- !u!1 &8721768064768360617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2239708437709089844, guid: bab5d64ebc704574c988ae5c9a1abffa, type: 3}
+  m_PrefabInstance: {fileID: 7358032063918058653}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6451364003050799877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8721768064768360617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3508d7ccc8dea9c4694508624993c29c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedItemPrefab: {fileID: 4761047641739043198, guid: cd7cfce40bb5fc746a939d5828508197, type: 3}
+  lootList:
+  - {fileID: 11400000, guid: 6510c34df5da95844b01a5aae87fb216, type: 2}

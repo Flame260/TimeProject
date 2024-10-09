@@ -45,6 +45,13 @@ public class shooting : MonoBehaviour
         rb.AddForce(firepoint.right * bulletforce, ForceMode2D.Impulse);
         bullets--;
     }
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Collectible")
+        {
+            bullets = bullets + 5;
+            Destroy(collision.gameObject);
+        }
+    }
 }
 

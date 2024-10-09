@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: -4694848996370360890}
   - component: {fileID: -5213997213823368633}
   - component: {fileID: 3823235751793853503}
+  - component: {fileID: 2911561249062655079}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Collectible
@@ -212,6 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  Death: {fileID: 0}
   speed: 4
 --- !u!50 &3823235751793853503
 Rigidbody2D:
@@ -234,6 +236,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!114 &2911561249062655079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3298134312328724685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3508d7ccc8dea9c4694508624993c29c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedItemPrefab: {fileID: 4761047641739043198, guid: cd7cfce40bb5fc746a939d5828508197, type: 3}
+  lootList:
+  - {fileID: 11400000, guid: 6510c34df5da95844b01a5aae87fb216, type: 2}
 --- !u!1 &8898627282431124351
 GameObject:
   m_ObjectHideFlags: 0

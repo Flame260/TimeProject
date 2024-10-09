@@ -7,14 +7,15 @@ public class enemyai : MonoBehaviour
     public GameObject player;
     public GameObject Death;
     public float speed;
-    private bool touch; 
-
+    private bool touch;
+    public lootbag lootbag;
     private float distance;
 
     // Start is called before the first frame update
     void Start()
     {
-      player= GameObject.FindGameObjectWithTag("Player");
+      lootbag = GetComponent<lootbag>();
+      player = GameObject.FindGameObjectWithTag("Player");
       Death= GameObject.FindGameObjectWithTag("Death");
       touch = false; 
     }

@@ -6,9 +6,11 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
     public Gamemanager gamemanager;
+    
     private bool hit;
     public void Start()
     {
+        
         gamemanager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<Gamemanager>();
         hit = false;
     }
@@ -20,6 +22,7 @@ public class bullet : MonoBehaviour
         Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "Collectible")
         {
+            collision.GetComponent<lootbag>().InstantiateLoot(collision.transform.position);
             Destroy(collision.gameObject);
             gamemanager.AddScore();
             hit= true;
